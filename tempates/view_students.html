@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Data Display</title>
+</head>
+<body>
+    <h1>Students Details </h1>
+    <table border="1">
+<tr>
+    <th>Name</th>
+    <th>USN</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Collage</th>
+    <th>Degree</th>
+    <th>Branch</th>
+    <th>Sem</th>
+    <th>Update</th>
+    <th>Delete</th>
+</tr>
+{% for student in students %}
+<tr>
+    <th>{{ student.name }}</th>
+    <th>{{ student.usn }}</th>
+    <th>{{ student.email }}</th>
+    <th>{{ student.phone }}</th>
+    <th>{{ student.college }}</th>
+    <th>{{ student.degree }}</th>
+    <th>{{ student.branch }}</th>
+    <th>{{ student.sem }}</th>
+    <th><a href="{% url 'update_student' student.id %}">Update</a></th>
+    <th><a href="{% url 'delete_student' student.id %}">Delete</a></th>
+
+    <th></th>
+</tr>
+{% endfor %}
+    </table>      
+</body>
+</html>

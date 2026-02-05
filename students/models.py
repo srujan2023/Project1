@@ -4,7 +4,7 @@ class Student(models.Model):
     name=models.CharField(max_length=100)
     usn=models.CharField(max_length=11,unique=True)
     email=models.EmailField(unique=True)
-    phone=models.BigIntegerField(max_length=10,unique=True)
+    phone=models.BigIntegerField(unique=True)
     college=models.CharField(max_length=100)
     degree=models.CharField(max_length=100)
     branch=models.CharField(max_length=100)

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Student Updation</h1>
+    <form method="post">
+        {% csrf_token %}
+      name:
+      <input type="text" id="name" name="sname" value="{{ student.name }}"><br> <br>
+      USN:
+      <input type="text" id="usn" name="usn" value="{{ student.usn }}"><br> <br>
+      email:
+      <input type="email" id="email" name="email" value="{{ student.email }}"><br> <br>
+      moblie:
+      <input type="number" id="mob" name="mob" value="{{ student.phone }}"><br> <br>
+        Collage:
+        <input type="text" id="collage" name="college" value="{{ student.college }}"><br> <br>
+        Degree:
+        <input type="text" id="degree" name="degree" value="{{ student.degree }}"><br> <br>
+        sem:
+        <input type="number" id="sem" name="sem" value="{{ student.sem }}"><br> <br>
+        Branch:
+        <input type="text" id="branch" name="branch" value="{{ student.branch }}"><br> <br>
+      <button type="submit" value="Update">Submit</button>
+     </form>
+</body>
+</html>
