@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Student Registration</h1>
+    <form method="post">
+        {% csrf_token %}
+      name:
+      <input type="text" id="name" name="sname"><br> <br>
+      USN:
+      <input type="text" id="usn" name="usn"><br> <br>
+      email:
+      <input type="email" id="email" name="email"><br> <br>
+      moblie:
+      <input type="number" id="moblie" name="moblie"><br> <br>
+        Collage:
+        <input type="text" id="collage" name="collage"><br> <br>
+        Degree:
+        <input type="text" id="degree" name="degree"><br> <br>
+        sem:
+        <input type="number" id="sem" name="sem"><br> <br>
+        Branch:
+        <input type="text" id="branch" name="branch"><br> <br>
+      <button type="submit" value="Register">Submit</button>
+     </form>
+</body>
+</html>
