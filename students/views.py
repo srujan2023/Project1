@@ -1,6 +1,7 @@
 
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Student
 
 def index(request):
     return render(request,'index.html')
@@ -17,15 +18,26 @@ def register(request):
         branch=request.POST.get('branch')
         sem=request.POST.get('sem')
         
-        
-        print("Student Name:",name)
-        print("USN",usn)
-        print("Email",email)
-        print("Phone",phone)
-        print("degree",degree)
-        print("college",college)
-        print("Branch",branch)
-        print("sem",sem)
-        
-        
+        stu_obj=Student()
+        stu_obj.name=name
+        stu_obj.usn=usn
+        stu_obj.email=email
+        stu_obj.phone=phone
+        stu_obj.college=college
+        stu_obj.degree=degree
+        stu_obj.branch=branch
+        stu_obj.sem=sem
+        stu_obj.save()
     return render(request,'register.html')
+        
+        # print("Student Name:",name)
+        # print("USN",usn)
+        # print("Email",email)
+        # print("Phone",phone)
+        # print("degree",degree)
+        # print("college",college)
+        # print("Branch",branch)
+        # print("sem",sem)
+        
+        
+   
